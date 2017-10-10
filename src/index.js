@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-import addons from '@storybook/addons';
 
 export class StyleDecorator extends Component {
     constructor(props) {
         super(props);
 
-        this.props.styles;
         this.story = this.props.story();
     }
 
@@ -20,9 +18,6 @@ export class StyleDecorator extends Component {
     }
 }
 
-export default styles => {
-    console.log('---', styles);
-    return story => {
-        return <StyleDecorator story={story} />;
-    };
-};
+export default styles => story => (
+    <StyleDecorator story={story} styles={styles} />
+);
