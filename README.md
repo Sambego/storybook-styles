@@ -15,8 +15,13 @@ import styles from "@sambego/storybook-styles";
 
 storiesOf("Button", module)
   .addDecorator(styles({
-    background: 'tomato',
-    fontFamily: 'Helvetica, Arial, sans-serif'
+    background: '#e1ecfa',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '500px',
   }))
   .add("with text", () => <button>Click me</button>);
 ```
+
+The style decorator accepts a JavaScript object with camelCased style properties which will be applied around the content of the preview area.
