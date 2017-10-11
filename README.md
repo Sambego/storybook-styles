@@ -1,5 +1,9 @@
 # Storybook styles
 
+This [storybook](https://storybook.js.org/) decorator allows you to add custom styles to the storybook preview panel.
+
+![Screenshot of a styles storybook preview](./storybook-styles.png)
+
 ### Getting Started
 
 ```sh
@@ -15,6 +19,7 @@ import styles from "@sambego/storybook-styles";
 
 storiesOf("Button", module)
   .addDecorator(styles({
+    fontFamily: 'Helvetica, Arial, sans-serif',
     background: '#e1ecfa',
     display: 'flex',
     alignItems: 'center',
